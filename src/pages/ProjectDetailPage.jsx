@@ -1,10 +1,12 @@
 import { useParams, Link } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
 import projects from "../data/projects";
+import usePageTitle from "../hooks/usePageTitle";
 
 function ProjectDetailPage() {
   const { slug } = useParams();
   const project = projects.find((item) => item.slug === slug);
+  usePageTitle(project ? `${project.title} | Yaw Effah Opoku` : "Project | Yaw Effah Opoku");
 
   if (!project) {
     return (

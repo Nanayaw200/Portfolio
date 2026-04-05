@@ -3,8 +3,11 @@ import ContactHero from "../components/contact/ContactHero";
 import TestimonialCard from "../components/contact/TestimonialCard";
 import ContactForm from "../components/contact/ContactForm";
 import testimonials from "../data/testimonials";
+import usePageTitle from "../hooks/usePageTitle";
 
 function ContactPage() {
+  usePageTitle("Contact | Yaw Effah Opoku");
+
   const testimonial = testimonials[0];
 
   return (

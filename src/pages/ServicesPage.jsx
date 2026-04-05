@@ -4,8 +4,11 @@ import ServiceCard from "../components/services/ServiceCard";
 import ProcessSection from "../components/services/ProcessSection";
 import CTASection from "../components/services/CTASection";
 import services from "../data/services";
+import usePageTitle from "../hooks/usePageTitle";
 
 function ServicesPage() {
+  usePageTitle("Services | Yaw Effah Opoku");
+
   return (
     <MainLayout>
       <ServicesHero />
