@@ -23,6 +23,7 @@ function ContactForm() {
     type: "",
     message: "",
   });
+  
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -71,6 +72,7 @@ function ContactForm() {
   };
 
   return (
+    
     <motion.form
       ref={formRef}
       className="contact-form"
@@ -80,6 +82,7 @@ function ContactForm() {
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.6 }}
     >
+      <input type="hidden" name="time" value={new Date().toLocaleString()} />
       <div className="contact-form__grid">
         <div className="contact-form__field">
           <label htmlFor="name">Your Name</label>
