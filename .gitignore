@@ -37,9 +37,6 @@ Thumbs.db
 # Vite specific
 .vite/
 
-# Optional: ignore large videos (recommended)
-src/assets/videos/
-
 # Optional: ignore images if very large (only if needed)
 # src/assets/images/
 

@@ -1,6 +1,6 @@
-import project1 from "../assets/videos/ChurchRec.mov";
+import project1 from "../assets/videos/ChurchRec.mp4";
 import project2 from "../assets/videos/QDoc.mp4";
-import project3 from "../assets/videos/AndamoRec.mov";
+import project3 from "../assets/videos/AndamoRec.mp4";
 import project4 from "../assets/images/projects/Andamo.png";
 
 const projects = [
