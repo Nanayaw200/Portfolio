@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">Bulkie</title>
+  <desc id="desc">Green Bulkie messaging platform logo</desc>
+  <path d="M42 9h31c20 0 36 16 36 36v16H74c-12 0-23 5-32 14V9Z" fill="#38a95b"/>
+  <path d="M42 72c9-10 21-15 35-15h17c25 0 45 20 45 45s-20 45-45 45H42V72Z" fill="#38a95b"/>
+  <path d="M42 72c8-9 19-14 32-15h19c-18 0-34 7-51 22V72Z" fill="#12121b"/>
+  <circle cx="71" cy="120" r="7" fill="#565666"/>
+  <circle cx="91" cy="120" r="7" fill="#565666"/>
+  <circle cx="111" cy="120" r="7" fill="#565666"/>
+</svg>

@@ -2,6 +2,7 @@ import project1 from "../assets/videos/ChurchRec.mp4";
 import project2 from "../assets/videos/QDoc.mp4";
 import project3 from "../assets/videos/AndamoRec.mp4";
 import project4 from "../assets/images/projects/Andamo.png";
+import project5 from "../assets/images/projects/Bulkie.svg";
 
 const projects = [
   {
@@ -67,7 +68,7 @@ const projects = [
       "The platform provides a more modern logistics experience with digital coordination, user-friendly ordering flows, and improved service visibility.",
     role: "Product Planning, Frontend Direction, UX Structuring",
     tools: ["React", "Ecommerce UX", "Logistics Workflow Design"],
-    liveLink: "#",
+    liveLink: "https://andamoexpress.com",
     githubLink: "#",
   },
   {
@@ -90,6 +91,28 @@ const projects = [
     role: "Product Vision, Platform Structuring, Frontend Planning",
     tools: ["React", "EdTech Product Design", "Learning Platform Strategy"],
     liveLink: "#",
+    githubLink: "#",
+  },
+  {
+    id: 5,
+    slug: "bulkie",
+    title: "Bulkie",
+    category: "Communication Platform",
+    description:
+      "A messaging platform built to help teams and communities communicate clearly, share updates, and stay connected.",
+    media: project5,
+    type: "image",
+    tags: ["Messaging", "Web Platform"],
+    layout: "small-card",
+    overview:
+      "Bulkie is a communication product focused on making everyday messaging more organized, accessible, and useful for groups.",
+    challenge:
+      "People and teams need a simpler way to keep conversations, announcements, and shared updates in one reliable place.",
+    solution:
+      "Bulkie brings messaging and group communication into a focused platform designed for fast, clear, and consistent interaction.",
+    role: "Product Planning, Frontend Direction, UX Structuring",
+    tools: ["React", "Messaging UX", "Platform Design"],
+    liveLink: "https://bulkiemsg.com",
     githubLink: "#",
   },
 ];

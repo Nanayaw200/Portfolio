@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 function ProjectCard({ project, delay = 0, variant = "default" }) {
+  const hasLiveLink = project.liveLink && project.liveLink !== "#";
+
   return (
     <motion.article
       className={`project-card project-card--${variant}`}
@@ -12,8 +14,12 @@ function ProjectCard({ project, delay = 0, variant = "default" }) {
       transition={{ duration: 0.55, delay }}
       whileHover={{ y: -6 }}
     >
-      <Link to={`/projects/${project.slug}`} className="project-card__link">
-        <div className="project-card__image-wrap">
+      <div className="project-card__content">
+        <Link
+          to={`/projects/${project.slug}`}
+          className="project-card__image-wrap"
+          aria-label={`View ${project.title} project details`}
+        >
           {project.type === "video" ? (
             <video
               src={project.media}
@@ -31,12 +37,14 @@ function ProjectCard({ project, delay = 0, variant = "default" }) {
               className="project-card__image"
             />
           )}
-        </div>
+        </Link>
 
         <div className="project-card__body">
           <span className="project-card__category">{project.category}</span>
 
-          <h3 className="project-card__title">{project.title}</h3>
+          <Link to={`/projects/${project.slug}`} className="project-card__title-link">
+            <h3 className="project-card__title">{project.title}</h3>
+          </Link>
 
           <p className="project-card__description">{project.description}</p>
 
@@ -47,8 +55,23 @@ function ProjectCard({ project, delay = 0, variant = "default" }) {
               </span>
             ))}
           </div>
+
+          {hasLiveLink ? (
+            <a
+              href={project.liveLink}
+              target="_blank"
+              rel="noreferrer"
+              className="project-card__live-link"
+            >
+              View live site <span aria-hidden="true">↗</span>
+            </a>
+          ) : (
+            <span className="project-card__live-link project-card__live-link--disabled">
+              Live site unavailable
+            </span>
+          )}
         </div>
-      </Link>
+      </div>
     </motion.article>
   );
 }

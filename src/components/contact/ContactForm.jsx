@@ -121,6 +121,8 @@ function ContactForm() {
           >
             <option value="">Select a service</option>
             <option value="web-development">Web Development</option>
+            <option value="mobile-app-development">Mobile App Development</option>
+            <option value="website-development">Website Development</option>
             <option value="frontend-development">Frontend Development</option>
             <option value="portfolio-website">Portfolio Website</option>
             <option value="business-website">Business Website</option>
