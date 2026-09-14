@@ -1,18 +1,19 @@
-// eslint-disable-next-line no-unused-vars
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 function ProjectCard({ project, delay = 0, variant = "default" }) {
   const hasLiveLink = project.liveLink && project.liveLink !== "#";
+  const shouldReduceMotion = useReducedMotion();
+  const MotionArticle = motion.article;
 
   return (
-    <motion.article
+    <MotionArticle
       className={`project-card project-card--${variant}`}
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.55, delay }}
-      whileHover={{ y: -6 }}
+      transition={{ duration: shouldReduceMotion ? 0.1 : 0.55, delay: shouldReduceMotion ? 0 : delay }}
+      whileHover={shouldReduceMotion ? undefined : { y: -6 }}
     >
       <div className="project-card__content">
         <Link
@@ -24,17 +25,19 @@ function ProjectCard({ project, delay = 0, variant = "default" }) {
             <video
               src={project.media}
               className="project-card__video"
-              autoPlay
               muted
               loop
               playsInline
               preload="metadata"
+              controls={false}
             />
           ) : (
             <img
               src={project.media}
               alt={project.title}
               className="project-card__image"
+              loading="lazy"
+              decoding="async"
             />
           )}
         </Link>
@@ -72,7 +75,7 @@ function ProjectCard({ project, delay = 0, variant = "default" }) {
           )}
         </div>
       </div>
-    </motion.article>
+    </MotionArticle>
   );
 }
 

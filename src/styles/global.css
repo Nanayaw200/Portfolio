@@ -8,6 +8,34 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .navbar,
+  .hero__status-badge,
+  .project-card,
+  .project-card__image-wrap,
+  .home-service-card {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  .hero__card::before {
+    filter: none !important;
+  }
+}
+
 body {
   font-family: Inter, Arial, Helvetica, sans-serif;
   background:
@@ -82,6 +110,7 @@ video {
   z-index: 1000;
   margin-top: 18px;
   backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 .navbar .container {
@@ -449,6 +478,7 @@ select:focus-visible {
   );
   border: 1px solid rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
 }
 
@@ -595,6 +625,7 @@ select:focus-visible {
   border-radius: 32px;
   background: linear-gradient(105deg, rgba(16, 0, 40, 0.62), rgba(7, 0, 24, 0.38));
   backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   transition: var(--transition);
 }
 

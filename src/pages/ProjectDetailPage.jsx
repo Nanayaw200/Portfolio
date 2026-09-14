@@ -42,17 +42,19 @@ function ProjectDetailPage() {
               <video
                 src={project.media}
                 className="project-detail__hero-video"
-                autoPlay
                 muted
                 loop
                 playsInline
                 controls
+                preload="metadata"
               />
             ) : (
               <img
                 src={project.media}
                 alt={project.title}
                 className="project-detail__hero-image"
+                loading="lazy"
+                decoding="async"
               />
             )}
           </div>
