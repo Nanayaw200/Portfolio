@@ -4,6 +4,8 @@ import project3 from "../assets/videos/AndamoRec.mp4";
 import project4 from "../assets/images/projects/Andamo.png";
 import project5 from "../assets/images/projects/Bulkie.svg";
 
+const project6 = "https://pub-a2f0e125ad874c2992fe240badaa40c2.r2.dev/ags_logo2.png";
+
 const projects = [
   {
     id: 1,
@@ -113,6 +115,28 @@ const projects = [
     role: "Product Planning, Frontend Direction, UX Structuring",
     tools: ["React", "Messaging UX", "Platform Design"],
     liveLink: "https://bulkiemsg.com",
+    githubLink: "#",
+  },
+  {
+    id: 6,
+    slug: "association-of-ghana-startups",
+    title: "Association of Ghana Startups",
+    category: "Startup Ecosystem",
+    description:
+      "A digital hub connecting Ghanaian startups with a member directory, resources, events, and founder support.",
+    media: project6,
+    type: "image",
+    tags: ["Startup Ecosystem", "Directory", "Community Platform"],
+    layout: "small-card-side",
+    overview:
+      "The Association of Ghana Startups website brings together information about the association, its programs, startup directory, resources, and community events.",
+    challenge:
+      "Founders need a clear way to discover association programs, connect with the startup community, and find relevant ecosystem resources.",
+    solution:
+      "The site organizes startup listings, founder support, events, and resources in one accessible destination for Ghana's startup ecosystem.",
+    role: "Website Design & Development",
+    tools: ["Startup Directory", "Community Platform", "Resource Hub"],
+    liveLink: "https://www.agsghana.org",
     githubLink: "#",
   },
 ];
